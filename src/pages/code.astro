@@ -1,25 +1,12 @@
 ---
-import '../styles/global.css';
+import Window from '../components/Window.astro';
+import Layout from '../layouts/Layout.astro';
 
-const pageTitle : string = "Astro";
+const titleName = "Code";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/garden/">Garden</a>
-    <a href="/music/">Music</a>
-    <a href="/code/">Code</a>
-     
-    <h1>Code</h1>
+<Layout title={titleName}>
+  <Window title={titleName}>
     <h3>Notes:</h3>
     <ul>
         <li>Major coding projects, including school ones that I'm proud of and work projects definitely</li>
@@ -36,6 +23,22 @@ const pageTitle : string = "Astro";
         <li>extra text and info if you click maybe?</li>
         <li>This one (like music) would probably do well in a file storing file viewer type of format, but let me see if i can come up with something more interesting for either</li>
         <li>    maybe start them both as a file format and transition after that</li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+
+        <li></li>
+
+        <li></li>
+
+        <li></li>
+
+        <li></li>
+
+        <li></li>
+
+
     </ul>
-  </body>
-</html>
+  </Window>
+</Layout>

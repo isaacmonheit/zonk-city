@@ -1,37 +1,39 @@
 ---
-import '../styles/global.css';
-
-const pageTitle : string = "Astro";
+import Hamburger from '../components/Hamburger.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/garden/">Garden</a>
-    <a href="/music/">Music</a>
-    <a href="/code/">Code</a>
-     
-    <h1>zonk</h1>
-    <h3>Notes:</h3>
-    <ul>
-        <li>Add hand drawn pictures to each page before i actually start coding them</li>
-    </ul>
-    <h3>Style</h3>
-    <ul>
-        <li>frutiger aero</li>
-        <li>light blue, light green, grassy field, bright water, fishes swimming in the air</li>
-        <li>windows xp or windows 98 style menu icons, one for each page, keep them down at the bottom in a desktop type of thing</li>
-        <li>Im definitely interested in modeling old windows/mac computer with popup like screens when you click on each option</li>
-        <li>Each page is basically just an app, with the background still there so it maintains the theme</li>
-        <li>app zoom in animations? also thinking about being able to drag around the apps but maybe theres no point</li>
-    </ul>
-  </body>
-</html>
+<Layout title='zonk city'>
+  <Hamburger/>
+    <div id="toggle-content">
+      <h1>zonk</h1>
+      <h3>Notes:</h3>
+      <ul>
+          <li>Add hand drawn pictures to each page before i actually start coding them</li>
+      </ul>
+      <h3>Style</h3>
+      <ul>
+          <li>frutiger aero</li>
+          <li>light blue, light green, grassy field, bright water, fishes swimming in the air</li>
+          <li>windows xp or windows 98 style menu icons, one for each page, keep them down at the bottom in a desktop type of thing</li>
+          <li>Im definitely interested in modeling old windows/mac computer with popup like screens when you click on each option</li>
+          <li>Each page is basically just an app, with the background still there so it maintains the theme</li>
+          <li>app zoom in animations? also thinking about being able to drag around the apps but maybe theres no point</li>
+      </ul>
+      <h3>TODO</h3>
+      <ul>
+          <li>✅ Basic background, 4 menu apps at bottom that take you to different pages, rn 5th page to get back to home but that will go later (make component for item, layout for page)</li>
+          <li>✅ windows for each page with the background still showing, home page notes only pop up with button press</li>
+          <li>see-through windows xp vista (aero) like components that have translucent top menu bar and the X out simple (also fullscreen implementation)</li>
+          <li>clean up unused files</li>
+          <li>get rid of as many global styles as possible</li>
+          <li>icons for apps</li>
+          <li>start working on background (grassy hill? clouds? flying fish?)</li>
+          <li>folders and file type system (to be used for most sections but definitely music)</li>
+          <li>clean up styles on computer, make sure everything looks nice</li>
+          <li>phone stuff</li>
+          <li>aero peek????</li>
+          <li>profit</li>
+      </ul>
+    </div>
+</Layout>

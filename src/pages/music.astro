@@ -1,39 +1,25 @@
 ---
-import '../styles/global.css';
+import Window from '../components/Window.astro';
+import Layout from '../layouts/Layout.astro';
 
-const pageTitle : string = "Astro";
+const titleName = "Music";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/garden/">Garden</a>
-    <a href="/music/">Music</a>
-    <a href="/code/">Code</a>
-     
-    <h1>Music</h1>
-
+<Layout title={titleName}>
+  <Window title={titleName}>
     <h3>Notes:</h3>
     <ul>
-        <li>Some form of music playback for all content I've made</li>
-        <li>Organized by -- date? type? location posted? </li>
-        <li>Maybe split live and recorded, but do i have much live to show?</li>
-        <li>Would be really cool to eventually link spotify API and automatically upload new songs onto here</li>
+      <li>Some form of music playback for all content I've made</li>
+      <li>Organized by -- date? type? location posted? </li>
+      <li>Maybe split live and recorded, but do i have much live to show?</li>
+      <li>Would be really cool to eventually link spotify API and automatically upload new songs onto here</li>
     </ul>
     <h3>Notes:</h3>
     <ul>
-        <li>Like the music player app on windows xp -- look into that</li>
-        <li>Visuals are good, maintain visuals like album covers n stuff</li>
-        <li>I like the idea of opening up an app and maintaining the background like you didnt switch pages</li>
-        <li>Could even be just in files like a filestoring system not a music player, that doesn't seem like that bad of an idea</li>
+      <li>Like the music player app on windows xp -- look into that</li>
+      <li>Visuals are good, maintain visuals like album covers n stuff</li>
+      <li>I like the idea of opening up an app and maintaining the background like you didnt switch pages</li>
+      <li>Could even be just in files like a filestoring system not a music player, that doesn't seem like that bad of an idea</li>
     </ul>
-  </body>
-</html>
+  </Window>
+</Layout>
