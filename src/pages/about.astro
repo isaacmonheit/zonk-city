@@ -3,10 +3,11 @@ import Window from '../components/Window.astro';
 import Layout from '../layouts/Layout.astro';
 
 const titleName = "About Me"
+const iconPath = "../icons/about.png";
 ---
 
 <Layout title={titleName}>
-  <Window title={titleName}>
+  <Window title={titleName} iconPath={iconPath}>
     <h3>Notes:</h3>
     <ul>
         <li>keep it simple, less is more</li>

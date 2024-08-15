@@ -3,11 +3,14 @@ import Window from '../components/Window.astro';
 import Layout from '../layouts/Layout.astro';
 
 const titleName = "Garden";
+const iconPath = "../icons/garden.png";
+
 ---
 
 <Layout title={titleName}>
-  <Window title={titleName}>
-    <h3>Notes:</h3>
+  <Window title={titleName} iconPath={iconPath}>
+    <iframe src="https://isaacmonheit.com" width="100%" height="450px"></iframe>
+    <!-- <h3>Notes:</h3>
     <ul>
       <li>Garden is inspired by <a href=https://eva.town/garden>eva.town/garden</a> am I copying too much? (i think no)</li>
       <li>Main focus was going to be on small coding-art projects</li>
@@ -23,14 +26,6 @@ const titleName = "Garden";
       <li>I have a vision of this flower garden (could also add other plants) in a fun colorful pattern and you can kinda hover your mouse around and different projects will pop up</li>
       <li>I might still need organization of some type, but more loose by date i think, i want this to me more explorative, it's stuff (at least for now) that I dont mind if people find or dont, i just want to document</li>
       <li>Want to figure out a way to autogenerate some geometric flowers for this, have a new one every time</li>
-    </ul>
-
-
-    <h3>Examples from the tutorial:</h3>
-    <ul>
-        <li><a href="/journalings/journaling-1/">Tutorial</a></li>
-        <li><a href="/journalings/journaling-2/">Tutorial 2</a></li>
-        <li><a href="/journalings/journaling-3/">Tutorial 3</a></li>
-    </ul>
+    </ul> -->
   </Window>
 </Layout>

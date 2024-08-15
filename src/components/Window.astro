@@ -1,12 +1,14 @@
 ---
-const { title } = Astro.props;
+const { title, iconPath } = Astro.props;
 
 ---
 
 <div class="window">
     <div class="title-bar">
         <div class="title">
-            <span class="icon"></span>
+            <span class="icon">
+                <img src={iconPath}/>
+            </span>
             {title}
         </div>
         <div class="controls">
@@ -103,6 +105,7 @@ const { title } = Astro.props;
         max-height: calc(100vh - var(--menu-height)); /* Adjust the height to avoid overlapping the bottom menu */
         display: flex;
         flex-direction: column; /* Stack children vertically */
+        box-sizing: border-box; /* Includes padding and border in the height */
     }
 
     .window.aero-peek {
@@ -121,6 +124,7 @@ const { title } = Astro.props;
         /* background: linear-gradient(to right, #0078D7, #00A2E8); */
         background: var(--glass-color);
         padding: 10px 10px;
+        height: 34px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -134,15 +138,16 @@ const { title } = Astro.props;
         align-items: center;
         font-weight: bold;
         color: #333;
-        font-size: 14px;
+        font-size: 20px;
         text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2); /* Subtle text shadow */
     }
 
-    .title .icon {
-        width: 16px;
-        height: 16px;
-        background: url('/path/to/icon.png') no-repeat center center;
-        margin-right: 10px;
+    .title .icon img {
+        width: 50px;
+        height: 50px;
+        margin-right: 6px;
+        margin-left: -8px;
+        margin-bottom: 4px;
     }
 
     .controls {

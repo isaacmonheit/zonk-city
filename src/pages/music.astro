@@ -3,10 +3,11 @@ import Window from '../components/Window.astro';
 import Layout from '../layouts/Layout.astro';
 
 const titleName = "Music";
+const iconPath = "../icons/music.png";
 ---
 
 <Layout title={titleName}>
-  <Window title={titleName}>
+  <Window title={titleName} iconPath={iconPath}>
     <h3>Notes:</h3>
     <ul>
       <li>Some form of music playback for all content I've made</li>

@@ -4,12 +4,23 @@
 <!-- todo: add icons for each link, icon component -->
 
 <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/garden/">Garden</a>
-    <a href="/music/">Music</a>
-    <a href="/code/">Code</a>
+    <a href="/" aria-label="Home">
+        <img src="../icons/home.png" alt="Home Icon" />
+    </a>
+    <a href="/music/" aria-label="Music">
+        <img src="../icons/music.png" alt="Music Icon" />
+    </a>
+    <a href="/code/" aria-label="Code">
+        <img src="../icons/code.png" alt="Code Icon" />
+    </a>
+    <a href="/garden/" aria-label="Garden">
+        <img src="../icons/garden.png" alt="Garden Icon" />
+    </a>
+    <a href="/about/" aria-label="About">
+        <img src="../icons/about.png" alt="About Icon" />
+    </a>
 </div>
+
 
 <style>
     /* phone */
@@ -22,7 +33,7 @@
         margin: 0;
     }
 
-    .nav-links a {
+    .nav-links a img {
         display: block;
         text-align: center;
         padding: 10px 0;
@@ -32,24 +43,28 @@
         text-transform: uppercase;
     }
 
-    .nav-links a:hover,
+    /* .nav-links a:hover,
     .nav-links a:focus {
         background-color: #ff9776;
     }
-    
+     */
     /* for computers */
     @media screen and (min-width: 636px) {
         .nav-links {
-            margin-left: 0;
+            margin-left: 4px;
             display: block;
             position: static;
             width: auto;
             background: none;
         }
 
-        .nav-links a {
+        .nav-links a img {
             display: inline-block;
-            padding: 15px 20px;
+            /* padding: 15px 20px; */
+
+            width: 60px;
+            height: 60px;
+            transform: translateY(-10px); /* Moves the image up by 10 pixels */
         }
     }
 </style>
