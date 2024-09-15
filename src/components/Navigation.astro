@@ -1,70 +1,79 @@
 ---
 ---
 
-<!-- todo: add icons for each link, icon component -->
-
 <div class="nav-links">
     <a href="/" aria-label="Home">
-        <img src="../icons/home.png" alt="Home Icon" />
+        <div class="icon-container">
+            <img src="../icons/home.png" alt="Home Icon" />
+            <span class="icon-title">Home</span>
+        </div>
     </a>
     <a href="/music/" aria-label="Music">
-        <img src="../icons/music.png" alt="Music Icon" />
+        <div class="icon-container">
+            <img src="../icons/music.png" alt="Music Icon" />
+            <span class="icon-title">Music</span>
+        </div>
     </a>
     <a href="/code/" aria-label="Code">
-        <img src="../icons/code.png" alt="Code Icon" />
+        <div class="icon-container">
+            <img src="../icons/code.png" alt="Code Icon" />
+            <span class="icon-title">Code</span>
+        </div>
     </a>
     <a href="/garden/" aria-label="Garden">
-        <img src="../icons/garden.png" alt="Garden Icon" />
+        <div class="icon-container">
+            <img src="../icons/garden.png" alt="Garden Icon" />
+            <span class="icon-title">Garden</span>
+        </div>
     </a>
     <a href="/about/" aria-label="About">
-        <img src="../icons/about.png" alt="About Icon" />
+        <div class="icon-container">
+            <img src="../icons/about.png" alt="About Icon" />
+            <span class="icon-title">About</span>
+        </div>
     </a>
 </div>
 
-
 <style>
-    /* phone */
     .nav-links {
-        width: 100%;
-        top: 5rem;
-        left: 48px;
-        background-color: #ff9776;
-        display: none;
-        margin: 0;
+        display: flex;
+        gap: 10px;
     }
 
-    .nav-links a img {
-        display: block;
-        text-align: center;
-        padding: 10px 0;
-        text-decoration: none;
-        font-size: 1.2rem;
+    .icon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 60px; /* Icon size */
+        height: 60px;
+        transition: transform 0.3s ease;
+    }
+
+    .icon-container img {
+        width: 60px;
+        height: 60px;
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    }
+
+    .icon-title {
+        margin-top: -20px;
+        font-size: 12px;
         font-weight: bold;
-        text-transform: uppercase;
+        color: white;
+        opacity: 0; /* Hidden by default */
+        transition: opacity 0.3s ease;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); /* Text shadow for contrast */
     }
 
-    /* .nav-links a:hover,
-    .nav-links a:focus {
-        background-color: #ff9776;
+    /* Hover Effect */
+    .icon-container:hover img {
+        transform: translateY(-80px) rotate(360deg) scale(200%); /* Pop the icon up on hover */
+        transition: transform 1500ms ease;
     }
-     */
-    /* for computers */
-    @media screen and (min-width: 636px) {
-        .nav-links {
-            margin-left: 4px;
-            display: block;
-            position: static;
-            width: auto;
-            background: none;
-        }
 
-        .nav-links a img {
-            display: inline-block;
-            /* padding: 15px 20px; */
-
-            width: 60px;
-            height: 60px;
-            transform: translateY(-10px); /* Moves the image up by 10 pixels */
-        }
+    .icon-container:hover .icon-title {
+        opacity: 1; /* Show the name on hover */
     }
 </style>

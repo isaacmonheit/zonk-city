@@ -1,4 +1,5 @@
 ---
+import Projects from '../layouts/Projects.astro';
 import Window from '../components/Window.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -8,7 +9,9 @@ const iconPath = "../icons/code.png";
 
 <Layout title={titleName}>
   <Window title={titleName} iconPath={iconPath}>
-    <h3>Notes:</h3>
+    <Projects />
+
+    <!-- <h3>Notes:</h3>
     <ul>
         <li>Major coding projects, including school ones that I'm proud of and work projects definitely</li>
         <li>Also potentially some big personal projects I would inlude here, anything that bigger than what would go in garden</li>
@@ -24,22 +27,6 @@ const iconPath = "../icons/code.png";
         <li>extra text and info if you click maybe?</li>
         <li>This one (like music) would probably do well in a file storing file viewer type of format, but let me see if i can come up with something more interesting for either</li>
         <li>    maybe start them both as a file format and transition after that</li>
-        <li></li>
-        <li></li>
-
-        <li></li>
-
-        <li></li>
-
-        <li></li>
-
-        <li></li>
-
-        <li></li>
-
-        <li></li>
-
-
-    </ul>
+    </ul> -->
   </Window>
 </Layout>

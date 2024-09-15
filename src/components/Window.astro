@@ -84,8 +84,9 @@ const { title, iconPath } = Astro.props;
 
     .window-content {
         max-height: 100%; 
+        height: 100vh;
         flex-grow: 1; /* Make content area take up remaining space */
-        overflow-y: auto; /* Enable vertical scrolling within the content area */
+        overflow-y: scroll; /* Enable vertical scrolling within the content area */
         padding: 10px;
         background: white; /* Content background */
         border: 1px black solid;
@@ -110,7 +111,7 @@ const { title, iconPath } = Astro.props;
 
     .window.aero-peek {
         backdrop-filter: blur(0px);
-        background: rgba(255, 255, 255, 0.05); /* Almost fully transparent */
+        background: rgba(255, 255, 255, 0.4); /* Almost fully transparent */
         /* border: 2px solid black; Thin black outline */
         box-shadow: none; /* Remove any shadow */
     }

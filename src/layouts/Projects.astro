@@ -1,0 +1,28 @@
+---
+import Project from "../components/Project.astro";
+---
+<!-- Video Pipeline (Aerial Thermal Imaging)
+     16-Bit Depth Grayscale Video Compression (Aerial Thermal Imaging)
+     Autism Smiles Tablet Application
+     Every Photo Tells A Story (A Memory Archive) 
+     This Website 
+     Beat Sequencer
+     Big Pixelator-->
+<div id="project-viewer">
+    <Project title="Beat Sequencer" photoPath="../project-images/photo.jpg"/>
+    <Project title="Mummified Cheese Bread" photoPath="../project-images/horse.png" pagePath="../code/beat-sequencer"/>
+    <Project title="Mummified Cheese Bread" photoPath="../project-images/horse.png" pagePath="../code/beat-sequencer"/>
+    <Project title="Mummified Cheese Bread" photoPath="../project-images/horse.png" pagePath="../code/beat-sequencer"/>
+
+</div>
+
+<style>
+    #project-viewer {
+        margin-top: 20px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+</style>
