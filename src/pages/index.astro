@@ -1,11 +1,36 @@
 ---
 import Hamburger from '../components/Hamburger.astro';
+import TempWindow from '../components/TempWindow.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='zonk city'>
   <Hamburger/>
     <div id="toggle-content">
+      <TempWindow title="Welcome" iconPath="../icons/about1.png">
+          Hi, welcome to my site. Everything here is a work in progress. I am slowly moving towards the completetion of this project. This site will eventually become the location where I document everything that I am doing / have done in my life. Feel free to explore around :)
+          
+          <h3>TODO:</h3>
+          <ul>
+              <li>✅ First draft for <a href="/about">About</a></li>
+              <li>Fix broken project links in <a href="/garden">Garden</a> (quick)</li>
+              <li>Populate <a href="/code">Code</a> section with my projects</li>
+              <li>Clean up background animation</li>
+              <li>Folder system (for music)</li>
+              <li>Actually add my music (Spotify, Soundcloud, voice memos, live performances, music videos)</li>
+              <li>Flying fish</li>
+              <li>Icons</li>
+              <li>Plant my <a href="/garden">Garden</a> (blog space -- little code/music/art projects and blog and just general anything)</li>
+              <li>Clean up / make styles uniform</li>
+              <li>iPhone accessibility</li>
+            </ul>
+            <p>Background animation made by my sister Ava! (to be expanded on in the future...)</p>
+
+        </TempWindow>
+
+      </div>
+
+    <!-- <div id="toggle-content">
       <h1>zonk</h1>
       <h3>Notes:</h3>
       <ul>
@@ -28,20 +53,20 @@ import Layout from '../layouts/Layout.astro';
           <li>✅ clean up unused files (all in examples)</li>
           <li>✅ get rid of as many global styles as possible</li>
           <li>✅ icons for apps</li>
-          <li>design basic system for files and folder and componenets to do so BEFORE CODING</li>
+          <li>✅ design basic system for files and folder and componenets to do so BEFORE CODING</li>
           <li>folders and file type system (to be used for most sections but definitely music)</li>
           <li>start working on background (grassy hill? clouds? flying fish?)</li>
           <li>better icons?</li>
           <li>clean up styles on computer, make sure everything looks nice (icons evenness)</li>
           <li>music playing extra function</li>
           <li>phone stuff</li>
-          <li>profit</li>
       </ul>
-    </div>
+    </div> -->
 </Layout>
 
 <style>
+  /* Styling for the content box */
   #toggle-content {
-    display: none;
+      display: none;
   }
 </style>
